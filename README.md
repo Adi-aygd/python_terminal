@@ -254,35 +254,7 @@ The web interface provides:
 
 ## 🌍 Live Deployment
 
-**Want to host your terminal online?** The project is ready for deployment!
-
-### 🎆 Supported Platforms
-
-- **🚂 Railway** (Recommended - Free tier, easy setup)
-- **🎨 Render** (Great free tier, excellent performance)
-- **🟢 Heroku** (Classic choice, reliable)
-- **⚡ Vercel** (Serverless, fast global deployment)
-- **💙 GitHub Codespaces** (Development in the cloud)
-
-### 🚥 Quick Deployment
-
-For the **fastest deployment**, use Railway:
-
-```bash
-# 1. Push to GitHub
-git init
-git add .
-git commit -m "Python Web Terminal"
-# Create GitHub repo, then push
-
-# 2. Deploy to Railway
-# Visit railway.app → Deploy from GitHub repo
-# Your terminal will be live in 2-3 minutes!
-```
-
-**Result**: Get a live URL like `https://python-terminal.up.railway.app`
-
-📄 **See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions for all platforms.**
+https://python-terminal-1-5dm1.onrender.com
 
 ## 🏧 Architecture
 
@@ -362,26 +334,3 @@ The project uses the following Python packages:
 5. Run the test suite
 6. Submit a pull request
 
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🚀 Future Enhancements
-
-- **Command Auto-completion**: Tab completion for commands and file paths
-- **Advanced Piping**: Support for complex command pipelines
-- **Job Control**: Background process management
-- **Configuration**: User-configurable settings and aliases
-- **Plugin System**: Extensible plugin architecture
-- **Remote Execution**: SSH integration for remote command execution
-- **Enhanced AI**: More sophisticated natural language understanding
-
-## 👤 Author
-
-Built as part of a Python development project to demonstrate terminal emulation, natural language processing, and software architecture principles.
-
----
-
-**Happy Terminal-ing!** 🚀
-
-For questions, suggestions, or contributions, please feel free to reach out or open an issue.
