@@ -1,0 +1,92 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Activate Virtual Environment",
+            "type": "shell",
+            "command": "source venv/bin/activate",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Install Dependencies",
+            "type": "shell",
+            "command": "pip install -r requirements.txt",
+            "options": {
+                "shell": {
+                    "executable": "/bin/zsh",
+                    "args": ["-c", "source venv/bin/activate && pip install -r requirements.txt"]
+                }
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run Terminal",
+            "type": "shell",
+            "command": "python main.py",
+            "options": {
+                "shell": {
+                    "executable": "/bin/zsh",
+                    "args": ["-c", "source venv/bin/activate && python main.py"]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run Tests",
+            "type": "shell",
+            "command": "python test_terminal.py",
+            "options": {
+                "shell": {
+                    "executable": "/bin/zsh",
+                    "args": ["-c", "source venv/bin/activate && python test_terminal.py"]
+                }
+            },
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run Demo",
+            "type": "shell",
+            "command": "python demo.py",
+            "options": {
+                "shell": {
+                    "executable": "/bin/zsh",
+                    "args": ["-c", "source venv/bin/activate && python demo.py"]
+                }
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
+        }
+    ]
+}

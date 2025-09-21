@@ -1,0 +1,26 @@
+# Virtual environment
+venv/
+pyvenv.cfg
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VSCode settings
+.vscode/
+*.code-workspace
+launch.json
+settings.json
+tasks.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test artifacts (optional)
+*.log
+
+# Optional: ignore temporary deployment files
+*.tmp

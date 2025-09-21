@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Web Terminal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/terminal.css') }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><span class="terminal-icon">💻</span> Python Web Terminal</h1>
+                <p>AI-Powered Command Line Interface</p>
+            </div>
+            <div class="header-actions">
+                <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                <button id="examples-btn" class="btn btn-primary">Examples</button>
+                <button id="help-btn" class="btn btn-primary">Help</button>
+            </div>
+        </header>
+
+        <!-- Terminal Window -->
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <div class="terminal-title">
+                    <span id="session-info">Python Terminal - Session Loading...</span>
+                </div>
+            </div>
+            
+            <div class="terminal-body">
+                <div id="terminal-output" class="terminal-output"></div>
+                <div class="terminal-input-line">
+                    <span id="prompt" class="prompt">$</span>
+                    <input type="text" id="command-input" class="command-input" placeholder="Type your command here..." autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span id="current-dir">Loading...</span>
+            </div>
+            <div class="status-right">
+                <span id="connection-status" class="status-disconnected">Connecting...</span>
+                <span id="session-id">No Session</span>
+            </div>
+        </div>
+
+        <!-- Examples Modal -->
+        <div id="examples-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Command Examples</h2>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="examples-grid">
+                        <div class="example-category">
+                            <h3>🔧 Basic Commands</h3>
+                            <div class="example-commands" id="basic-commands"></div>
+                        </div>
+                        <div class="example-category">
+                            <h3>📁 File Operations</h3>
+                            <div class="example-commands" id="file-operations"></div>
+                        </div>
+                        <div class="example-category">
+                            <h3>📊 System Monitoring</h3>
+                            <div class="example-commands" id="system-monitoring"></div>
+                        </div>
+                        <div class="example-category">
+                            <h3>🤖 AI Natural Language</h3>
+                            <div class="example-commands" id="ai-natural-language"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading">
+        <div class="loading-spinner"></div>
+        <p>Executing command...</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/terminal.js') }}"></script>
+</body>
+</html>
