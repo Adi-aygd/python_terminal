@@ -212,7 +212,7 @@ def handle_command(data):
     emit('command_result', result)
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 500))
+    port = int(os.environ.get('PORT', 5000))
     debug = os.environ.get('DEBUG', 'True').lower() == 'true'
     
     print(f"""
