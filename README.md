@@ -240,7 +240,7 @@ source venv/bin/activate
 python web_terminal.py
 
 # Open your browser to:
-# http://localhost:5000
+# http://localhost:5001
 ```
 
 ### 🎆 Web Terminal Screenshots
